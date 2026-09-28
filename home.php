@@ -157,7 +157,8 @@ require_once 'functions.php';
 
                     if (!in_array($current, $public) && !is_logged_in()) {
                         flash("Please sign in to continue.", 'error', 'error');
-                        header("Location: login.php");
+                        //header("Location: index.php");
+                        echo '<script>window.location.href = "index.php";</script>';
                         exit();
                     }
 

@@ -94,7 +94,7 @@ $me_initial = strtoupper(substr($me_user, 0, 1));
     <!-- ===== ACTIVITY LOG ===== -->
     <?php if (has_permission($conn, 'activity_log.view')): ?>
         <li class="nav-item <?php echo $current_section === 'activity_log' ? 'active' : ''; ?>">
-            <a class="nav-link" href="?section=activity_log">
+            <a class="nav-link" href="?section=activity">
                 <i class="fas fa-fw fa-history"></i>
                 <span>Activity Log</span>
             </a>

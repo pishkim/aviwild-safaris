@@ -37,5 +37,5 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 flash("You have been signed out.", 'success', 'success');
 
-echo '<script>window.location.href = "login.php";</script>';
+echo '<script>window.location.href = "index.php";</script>';
 exit();

@@ -35,14 +35,11 @@ switch ($section) {
         break; 
 	case 'settings':
          include('settings.php');
-         break;
-    case 'logout':
-         include('logout.php');
          break; 
     default:
         // optional: show a default page or nothing
          //include('dashboard.php');
-		 include('activity_log.php');
+		 include('index.php');
         break;
 }
 

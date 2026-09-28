@@ -273,25 +273,25 @@ if (!empty($message)) {
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Blog Management</h1>
-                        <div>
-                            <?php if ($edit_post): ?>
-                                <span class="edit-mode-badge mr-2">
-                                    <i class="fas fa-edit"></i> Editing: <?php echo htmlspecialchars($edit_post['title']); ?>
-                                </span>
-                                <a href="?section=blog" class="btn btn-sm btn-secondary shadow-sm">
-                                    <i class="fas fa-times"></i> Cancel Edit
-                                </a>
-                            <?php else: ?>
-                                <?php if (has_permission($conn, 'blog.create')): ?>
-                                    <button class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
-                                            data-toggle="modal" data-target="#createPostModal">
-                                        <i class="fas fa-plus fa-sm text-white-50"></i> Create New Post
-                                    </button>
-                                <?php endif; ?>
-                            <?php endif; ?>
-                        </div>
-                    </div>
+    <h1 class="h3 mb-0 text-gray-800">Blog Management</h1>
+    <div>
+        <?php if ($edit_post): ?>
+            <span class="edit-mode-badge mr-2">
+                <i class="fas fa-edit"></i> Editing: <?php echo htmlspecialchars($edit_post['title']); ?>
+            </span>
+            <a href="?section=blog" class="btn btn-sm btn-secondary shadow-sm">
+                <i class="fas fa-times"></i> Cancel Edit
+            </a>
+        <?php else: ?>
+            <?php if (has_permission($conn, 'blog.create')): ?>
+                <button class="btn btn-sm btn-primary shadow-sm mt-2 mt-sm-0"
+                        data-toggle="modal" data-target="#createPostModal">
+                    <i class="fas fa-plus fa-sm text-white-50"></i> Create New Post
+                </button>
+            <?php endif; ?>
+        <?php endif; ?>
+    </div>
+</div>
 
                     <!-- ===== EDIT FORM ===== -->
                     <?php if ($edit_post): ?>

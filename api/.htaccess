@@ -1,0 +1,14 @@
+# Block direct access to config
+<Files "config.php">
+    Require all denied
+</Files>
+
+# Force HTTPS (comment out on localhost)
+# RewriteEngine On
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Only allow GET and OPTIONS at the Apache level too
+<LimitExcept GET OPTIONS>
+    Require all denied
+</LimitExcept>

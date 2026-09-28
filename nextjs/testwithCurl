@@ -1,0 +1,17 @@
+# Blog list
+curl -H "X-API-Key: YOUR_KEY" "http://localhost/travel_cms/api/blog.php?limit=5"
+
+# Filter by status
+curl -H "X-API-Key: YOUR_KEY" "http://localhost/travel_cms/api/blog.php?status=draft"
+
+# Single post
+curl -H "X-API-Key: YOUR_KEY" "http://localhost/travel_cms/api/blog.php?id=1"
+
+# Search
+curl -H "X-API-Key: YOUR_KEY" "http://localhost/travel_cms/api/blog.php?search=travel"
+
+# Company + activity
+curl -H "X-API-Key: YOUR_KEY" "http://localhost/travel_cms/api/company.php"
+
+# Unauthorized test (should return 401)
+curl "http://localhost/travel_cms/api/blog.php"

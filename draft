@@ -846,3 +846,42 @@ $total_posts = mysqli_num_rows($result);
     </script>
 </body>
 </html>
+
+
+…or create a new repository on the command line
+echo "# aviwild-safaris" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/pishkim/aviwild-safaris.git
+git push -u origin main
+…or push an existing repository from the command line
+git remote add origin https://github.com/pishkim/aviwild-safaris.git
+git branch -M main
+git push -u origin main
+
+
+<!-- ======================================================================== -->
+ # ===== Daily workflow =====
+git status                          # See what's changed
+git add .                           # Stage everything
+git commit -m "Your message"        # Commit
+git push                            # Push to GitHub
+
+# ===== Branch management =====
+git branch                          # List local branches
+git branch -a                       # List all (including remote)
+git checkout -b feature/xyz         # Create + switch to new branch
+git checkout main                   # Switch to main
+git merge feature/xyz               # Merge feature into current branch
+
+# ===== Sync with remote =====
+git pull                            # Get latest from GitHub
+git fetch --all                     # Fetch without merging
+git remote -v                       # Show remote URLs
+
+# ===== Undo / Fix =====
+git restore file.php                # Discard local changes to file
+git reset HEAD~1                    # Undo last commit (keep changes)
+git reset --hard HEAD~1             # Undo last commit (discard changes)
